@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AksharFlow · Legacy Hindi Font ⇄ Unicode Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Ambient glowing background mesh -->
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob-a"></span>
+    <span class="blob blob-b"></span>
+    <span class="blob blob-c"></span>
+  </div>
+
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-wrapper">
+        <div class="brand-mark" aria-hidden="true">अ</div>
+        <div class="brand-text">
+          <h1>
+            <span class="brand-name">AksharFlow</span>
+          </h1>
+          <p class="brand-desc">Next-Gen Hindi Font & Unicode Converter · Kruti Dev ⇄ DevLys ⇄ Unicode</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light / dark theme"
+          title="Switch Theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <path
+              d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8">
+            </path>
+          </svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.5 6.5 0 0 0 9.8 9.8Z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick Presets & Status Bar -->
+  <div class="quick-bar">
+    <div class="presets-container">
+      <span class="preset-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon
+            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+          </polygon>
+        </svg>
+        Quick Presets:
+      </span>
+      <button class="preset-chip" type="button" data-preset="standard">Standard Hindi</button>
+      <button class="preset-chip" type="button" data-preset="official">Govt / Official Letter</button>
+      <button class="preset-chip" type="button" data-preset="kruti050">Kruti 050 Digits & Matras</button>
+      <button class="preset-chip" type="button" data-preset="complex">Complex Conjuncts & Reph</button>
+    </div>
+    <div class="feature-pills">
+      <span class="feature-pill">
+        <span class="feature-pill-dot" aria-hidden="true"></span>
+        100% Client-Side Safe
+      </span>
+    </div>
+  </div>
+
+  <!-- Main Conversion Studio -->
+  <main class="container-fluid">
+    <!-- ===== Box 1: Input Studio ===== -->
+    <section class="box" id="box-input">
+      <!-- Box Header -->
+      <div class="box-head">
+        <div class="box-title-group">
+          <span class="box-num-badge">1</span>
+          <h2>Source Input</h2>
+        </div>
+        <div class="box-actions-top">
+          <button id="pasteInputBtn" class="btn-action-pill" type="button" title="Paste from clipboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+            </svg>
+            <span>Paste</span>
+          </button>
+          <span class="badge">Input</span>
+        </div>
+      </div>
+
+      <!-- Settings Toolbar (Top) -->
+      <div class="box-toolbar">
+        <div class="control-item">
+          <label for="sourceFontSelect" class="control-label">Source Font</label>
+          <select id="sourceFontSelect" class="control-select">
+            <option value="auto">✨ Auto-detect Font</option>
+            <option value="krutidev">Kruti Dev 010</option>
+            <option value="devlys">DevLys 010</option>
+            <option value="krutidev050">Kruti Dev 050</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Text Area Field -->
+      <div class="field-wrapper">
+        <textarea id="inputText" class="field input-field"
+          placeholder='Paste legacy text here, e.g. "esllZ xkuh gkS" or "dksbZ Hkh" ... Or type in Unicode Devanagari'
+          spellcheck="false"></textarea>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="field-stats-bar">
+        <div class="stats-group">
+          <span class="stat-item"><span id="inCharCount" class="stat-val">0</span> chars</span>
+          <span class="stat-item">·</span>
+          <span class="stat-item"><span id="inWordCount" class="stat-val">0</span> words</span>
+          <span class="stat-item">·</span>
+          <span class="stat-item"><span id="inLineCount" class="stat-val">0</span> lines</span>
+        </div>
+      </div>
+
+      <!-- Action Bar (Bottom) -->
+      <div class="box-actions-bottom">
+        <button id="convertBtn" class="btn btn-primary" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polyline points="13 17 18 12 13 7"></polyline>
+            <polyline points="6 17 11 12 6 7"></polyline>
+          </svg>
+          <span>Convert</span>
+          <kbd>Ctrl+↵</kbd>
+        </button>
+
+        <button id="sampleBtn" class="btn btn-ghost" type="button">Sample</button>
+        <button id="clearBtn" class="btn btn-ghost" type="button">Clear</button>
+      </div>
+
+      <!-- Status Wrapper -->
+      <div class="status-wrapper">
+        <div id="inputStatus" class="status"></div>
+      </div>
+    </section>
+
+    <!-- ===== Middle Divider with Swap Action ===== -->
+    <div class="studio-divider">
+      <button id="swapBtn" class="swap-btn" type="button" title="Swap input and output for reverse conversion"
+        aria-label="Swap input and output">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- ===== Box 2: Output Studio ===== -->
+    <section class="box" id="box-filter">
+      <!-- Box Header -->
+      <div class="box-head">
+        <div class="box-title-group">
+          <span class="box-num-badge">2</span>
+          <h2>Output Studio</h2>
+        </div>
+        <div class="box-actions-top">
+          <span class="badge">Output</span>
+        </div>
+      </div>
+
+      <!-- Settings Toolbar (Top) -->
+      <div class="box-toolbar">
+        <div class="control-item">
+          <label for="targetFontSelect" class="control-label">Target Font</label>
+          <select id="targetFontSelect" class="control-select">
+            <optgroup label="✨ Modern Unicode Devanagari">
+              <option value="'Noto Sans Devanagari', Mangal, sans-serif" selected>Noto Sans Devanagari</option>
+              <option value="Mangal, 'Nirmala UI', 'Noto Sans Devanagari', sans-serif">Mangal</option>
+              <option value="'Nirmala UI', Mangal, 'Noto Sans Devanagari', sans-serif">Nirmala UI</option>
+              <option value="Aparajita, 'Noto Sans Devanagari', sans-serif">Aparajita</option>
+              <option value="Kokila, 'Noto Sans Devanagari', sans-serif">Kokila</option>
+              <option value="'Segoe UI', 'Noto Sans Devanagari', sans-serif">Segoe UI</option>
+              <option value="Tahoma, 'Noto Sans Devanagari', sans-serif">Tahoma</option>
+            </optgroup>
+            <optgroup label="🔄 Reverse Legacy Conversion">
+              <option value="krutidev">Kruti Dev 010 (Legacy)</option>
+              <option value="krutidev050">Kruti Dev 050 (Legacy)</option>
+              <option value="devlys">DevLys 010 (Legacy)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="control-item">
+          <label for="fontSize" class="control-label">Size</label>
+          <select id="fontSize" class="control-select">
+            <option value="18px">Small</option>
+            <option value="22px" selected>Normal</option>
+            <option value="28px">Large</option>
+            <option value="36px">X-Large</option>
+          </select>
+        </div>
+
+        <button id="submitBtn" class="btn-icon-subtle" type="button" title="Apply / Refresh Font"
+          aria-label="Apply Font">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Text Area Field -->
+      <div class="field-wrapper">
+        <div id="filteredOut" class="field output-field filtered-out" dir="ltr" contenteditable="false"
+          data-placeholder="Converted text will appear here in your selected font..."
+          aria-label="Output rendered in the selected font"></div>
+      </div>
+      <!-- Stats Bar -->
+      <div class="field-stats-bar">
+        <div class="stats-group">
+          <span class="stat-item"><span id="filteredCharCount" class="stat-val">0</span> chars</span>
+          <span class="stat-item">·</span>
+          <span class="stat-item"><span id="outWordCount" class="stat-val">0</span> words</span>
+          <span class="stat-item">·</span>
+          <span class="stat-item"><span id="outLineCount" class="stat-val">0</span> lines</span>
+        </div>
+      </div>
+
+
+      <!-- Action Bar (Bottom) -->
+      <div class="box-actions-bottom">
+        <button id="copyFilteredBtn" class="btn btn-primary" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy Output</span>
+        </button>
+
+        <button id="downloadFilteredBtn" class="btn btn-ghost" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Download .txt</span>
+        </button>
+      </div>
+
+      <!-- Status Wrapper -->
+      <div class="status-wrapper">
+        <div id="filteredStatus" class="status"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>AksharFlow</strong> · Designed and Developed by Shreyash Mane
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Toast Notifications -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Core Scripts -->
+  <script src="js/fonts.js"></script>
+  <script src="js/converter.js"></script>
+  <script src="js/detector.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
