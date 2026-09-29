@@ -41,16 +41,6 @@ Designed with a sleek **Cosmic Obsidian & Warm Light** glassmorphism interface, 
 
 ---
 
-## 📊 Font Support Matrix
-
-| Font Family | Encoding Standard | Keyboard Layout | Universal Web Support | Primary Use Case |
-| :--- | :--- | :--- | :---: | :--- |
-| **Kruti Dev 010** | Legacy ASCII (Non-Unicode) | Remington Typewriter | ❌ Requires Font | Govt typing tests, court records, DTP |
-| **DevLys 010** | Legacy ASCII (Non-Unicode) | Remington Typewriter | ❌ Requires Font | Newspaper publishing & print typography |
-| **Kruti Dev 050** | Legacy ASCII (Special Charset) | Remington (with Hindi Digits) | ❌ Requires Font | Documents with Hindi numerals (०–९) & math |
-| **Unicode Devanagari** | UTF-8 / ISO 10646 (U+0900–U+097F) | InScript / Phonetic / Remington | ✅ Universal Native | Web, mobile, social media, databases |
-
----
 
 ## ⚙️ How the Conversion Engine Works
 
