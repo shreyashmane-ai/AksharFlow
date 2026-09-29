@@ -1034,6 +1034,22 @@ kbd {
   gap: 12px;
 }
 
+.footer-author-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px dashed rgba(249, 87, 33, 0.4);
+}
+
+.footer-author-link:hover {
+  color: var(--primary-hover);
+  border-bottom-style: solid;
+  transform: translateY(-1px);
+}
+
 /* ============================================================
    Responsive Tweaks
    ============================================================ */

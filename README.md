@@ -6,11 +6,12 @@
 
 **Next-Gen Bidirectional Converter for Legacy Devanagari Typewriter Fonts & Unicode**
 
-[![Tests](https://img.shields.io/badge/Tests-68%2F68%20Passing-10b981?style=flat-square&logo=node.js)](file:///e:/My%20Projects/text%20converter/test.js)
+[![Tests](https://img.shields.io/badge/Tests-68%2F68%20Passing-10b981?style=flat-square&logo=node.js)](test.js)
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-0%20(Vanilla%20JS)-6366f1?style=flat-square)](#)
 [![Privacy](https://img.shields.io/badge/Privacy-100%25%20Client--Side-f59e0b?style=flat-square)](#)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](#)
-[![Author](https://img.shields.io/badge/Author-Shreyash%20Mane-ff6b35?style=flat-square)](https://github.com/shreyashmane-ai)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shreyash%20Mane-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/shreyash-mane-b715541a7/)
+[![GitHub](https://img.shields.io/badge/GitHub-shreyashmane--ai-181717?style=flat-square&logo=github)](https://github.com/shreyashmane-ai)
 
 </div>
 
@@ -37,6 +38,17 @@ Designed with a sleek **Cosmic Obsidian & Warm Light** glassmorphism interface, 
 - 📊 **Live Text Statistics**: Real-time counter for **Characters**, **Words**, and **Lines** across both source input and target output.
 - 💾 **Clipboard & File Export**: One-click copy with animated toast feedback, paste integration, and UTF-8 `.txt` (BOM-prefixed) file download.
 - 🌓 **Cosmic Dark & Warm Light Themes**: Symmetrical glassmorphic UI with animated mesh aura and theme memory.
+
+---
+
+## 📊 Font Support Matrix
+
+| Font Family | Encoding Standard | Keyboard Layout | Universal Web Support | Primary Use Case |
+| :--- | :--- | :--- | :---: | :--- |
+| **Kruti Dev 010** | Legacy ASCII (Non-Unicode) | Remington Typewriter | ❌ Requires Font | Govt typing tests, court records, DTP |
+| **DevLys 010** | Legacy ASCII (Non-Unicode) | Remington Typewriter | ❌ Requires Font | Newspaper publishing & print typography |
+| **Kruti Dev 050** | Legacy ASCII (Special Charset) | Remington (with Hindi Digits) | ❌ Requires Font | Documents with Hindi numerals (०–९) & math |
+| **Unicode Devanagari** | UTF-8 / ISO 10646 (U+0900–U+097F) | InScript / Phonetic / Remington | ✅ Universal Native | Web, mobile, social media, databases |
 
 ---
 
@@ -101,6 +113,13 @@ No build tools, npm packages, or server installations are required:
 open index.html
 ```
 
+### 2. Run Test Suite
+AksharFlow includes a built-in zero-dependency Node.js test suite with 68 test assertions:
+
+```bash
+node test.js
+```
+
 ---
 
 ## ⌨️ Keyboard Shortcuts
@@ -113,11 +132,15 @@ open index.html
 
 ---
 
-## 👤 Author & Credits
+## 👤 Author & Connect
 
-Designed and Developed by **[Shreyash Mane](https://github.com/shreyashmane-ai)**.
+Designed and Developed by **[Shreyash Mane](https://www.linkedin.com/in/shreyash-mane-b715541a7/)**.
 
-* Based on the standard Devanagari typewriter `Kru2Uni` conversion mapping.
-* Kruti Dev 050 glyph definitions byte-verified against standard Indic typographers.
+* **LinkedIn**: [linkedin.com/in/shreyash-mane-b715541a7](https://www.linkedin.com/in/shreyash-mane-b715541a7/)
+* **GitHub**: [@shreyashmane-ai](https://github.com/shreyashmane-ai)
 
 ---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
